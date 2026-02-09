@@ -46,3 +46,4 @@ vim.diagnostic.config({
 	},
 })
 
+vim.opt.pumheight = 10
