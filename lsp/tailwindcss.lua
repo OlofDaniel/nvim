@@ -1,0 +1,14 @@
+-- lsp/tailwindcss.lua
+return {
+  cmd = { 'tailwindcss-language-server', '--stdio' },
+  filetypes = {
+    'html', 'css', 'scss', 'javascriptreact', 'typescriptreact', 'vue', 'svelte'
+  },
+  root_markers = {
+    'tailwind.config.js',
+    'tailwind.config.ts',
+    'postcss.config.js',
+    'package.json',
+    'node_modules'
+  },
+}

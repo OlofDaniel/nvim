@@ -12,6 +12,8 @@ return {
 
 		nvimtree.setup({
 			git = {
+				show_on_dirs = false,
+				show_on_open_dirs = false,
 				ignore = false,
 			},
 			diagnostics = {

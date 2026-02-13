@@ -1,13 +1,13 @@
 local opt = vim.opt
-
+opt.winbar = "%f %m"
 opt.relativenumber = true
 opt.number = true
-
+opt.signcolumn = "yes"
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
-
+opt.winborder = "rounded"
 opt.wrap = false
 
 opt.ignorecase = true
@@ -28,6 +28,8 @@ opt.swapfile = false
 
 opt.undofile = true
 
+opt.scrolloff = 10
+
 vim.diagnostic.config({
 	virtual_text = {
 		source = "if_many",
@@ -47,3 +49,10 @@ vim.diagnostic.config({
 })
 
 vim.opt.pumheight = 10
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
