@@ -6,8 +6,8 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<leader>cs", ":nohl<CR>", { desc = "Clears search highlights" })
 
-keymap.set("n", "<leader>h", "<C-w>h", { desc = "Move to left window" })
-keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move to right window" })
+keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
+keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 
 keymap.set({ "n", "v", "o" }, "L", "$", { desc = "Go to end of line" })
 keymap.set({ "n", "v", "o" }, "H", "_", { desc = "Go to start of line" })

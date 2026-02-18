@@ -13,6 +13,8 @@ return{
       },
       indent = { enable = true },
       ensure_installed = {
+	"python",
+	"java",
         "json",
         "javascript",
         "typescript",
